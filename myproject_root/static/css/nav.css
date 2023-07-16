@@ -1,0 +1,29 @@
+#navcontainer {
+   background-image: linear-gradient(to right, #006eff, #05f8f8);
+    padding: 20px;
+  }
+  
+  .navlist {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content:space-around;
+  }
+  
+  
+  .navlist li a {
+    text-decoration: none;
+    color: #333;
+    padding: 5px;
+  }
+  
+  .navlist li a:hover {
+    background-color: #120871;
+    color: #fff;
+  }
+  
+  .navlist li#active a {
+    font-weight: bold;
+  }

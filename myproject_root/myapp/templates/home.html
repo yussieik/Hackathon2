@@ -1,0 +1,29 @@
+
+{% extends 'base.html' %}
+{% load static %}
+
+{%block content%}
+<section id="header">
+
+    <div class="image-container">
+        <img id="logo" src="{% static 'images/photo.jpg' %}" alt="Or Braha" >
+        
+    </div>
+    <div id="headerTxt">
+    <h1 id="bienvenue">Bienvenue sur le site de la communauté </h1> 
+    <h1>française de Naharyia</h1>
+    <h1 id="orbraha">Or Braha אור ברכה</h1>
+    </div>
+</section> 
+<br>
+{% if user.is_authenticated %}
+<section id="calendarmap">
+    <div id="hebcal-shabbat"></div>
+    <div id="map"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3346.053585659715!2d35.090434200000004!3d33.0023627!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x151dcef9033291e3%3A0xb9b2c887076ffbae!2sDavid%20Remez%2032%2C%20Nahariya!5e0!3m2!1sfr!2sil!4v1689109192481!5m2!1sfr!2sil" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
+</section> <br><br>
+<h2>Calendrier du mois</h2>
+<div id="calendar"></div>
+
+{% endif %}
+{%endblock content%}
+

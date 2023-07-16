@@ -1,0 +1,28 @@
+{%load static%}
+
+<link rel="stylesheet" href="{% static 'css/nav.css' %}">
+
+<div id="navcontainer">
+    <ul class="navlist">
+        <li id="active"><a href="{% url 'home' %}" id="current">Acceuil</a></li>
+        {% if user.is_authenticated %}
+            <li><a href="{% url 'create' %}">Faire un don</a></li>
+            <li><a href="{% url 'list' %}">Voir mes dons</a></li>
+            <li><a href="{% url 'my-program' %}">Programme du mois</a></li>
+            <li><a href="{% url 'logout' %}">Se déconnecter</a></li>
+        {% else %}
+            <li><a href="{% url 'register' %}">S'enregistrer</a></li>
+            <li><a href="{% url 'login' %}">Se connecter</a></li>
+        {% endif %}
+    </ul>
+</div>
+
+<div id="welcomeuser">
+    {% if user.is_authenticated %}
+        Bienvenue <b>{{ user }}!</b>
+    {% endif %}
+</div>
+    
+    
+
+    

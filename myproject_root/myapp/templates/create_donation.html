@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{%block content%}
+
+
+<section id="donationform">
+
+<div>
+  <p>Vous pouvez effectuer un don par virement bancaire à:</p>
+  <div id="address">
+    <p> <span>בנק הדואר </span> Banque Hadoar 9</p> 
+    <p> <span>סניף</span> Snif 001</p>
+    <p> <span>מספר חשבון</span> Numéro de compte 30123333</p>
+  </div>
+  <br>
+  <p>Ou par bit au numero +97255-500-1885</p> <br>
+  <p>Ou par chèque</p> <br> <br> <br>
+</div>
+
+<form method="post">
+  <h1>Faire un don:</h1>
+  {% csrf_token %}
+  {{ form.as_p }}
+  <button type="submit">Submit</button>
+</form>
+</section>
+
+<br>
+
+<a href="{% url 'list' %}" id="seedonations">Voir mes dons</a>
+
+{%endblock content%}

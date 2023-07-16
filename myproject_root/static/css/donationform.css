@@ -1,0 +1,16 @@
+#donationform{
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 10%;
+}
+
+#seedonations{
+    text-align: center;
+    margin-left: 50%;
+    border-right: 2px solid aqua;
+    border-bottom: 2px solid aqua;
+    padding: 2%;
+    text-decoration: none;
+    color: blue;
+}
+

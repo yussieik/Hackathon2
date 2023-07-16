@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{%block content%}
+<h2>Dons effectués</h2>
+{% if donations %}
+  <ul>
+    {% for donation in donations %}
+      <li class="mydonations">{{donation.date }}: {{ donation.amount }} NIS via {{ donation.payment_method }}</li> <br>
+    {% endfor %}
+  </ul>
+{% else %}
+  <p>No donations yet.</p>
+
+{% endif %}
+
+{%endblock content%}
