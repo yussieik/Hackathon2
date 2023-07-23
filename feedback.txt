@@ -1,0 +1,20 @@
+Hello Meryl,
+
+Here's your Django project review:
+
+- Starting with project structure and file organization, there are a couple of issues. For instance, you've included the virtual environment in the repository, which is not a recommended practice. It's best to keep dependencies listed in a requirements file, and let each user create their own environment. Also, you're mixing different domain entities, like UserProfile and Donation, in the same models.py file. Consider structuring your application in a modular way by creating separate apps for different domain entities.
+
+- The readability of your code is impressive. It's clear, well-formatted, and adheres to the PEP 8 standards.
+
+- When it comes to using Django and Django REST Framework, you've demonstrated good understanding. Notably, the use of signals for creating user profiles and attaching profiles to a certain group is a great move. Likewise, your knowledge of Django forms is well-displayed in the way you update uncommitted instances. However, the serializers.py file is left empty, which indicates a missed opportunity to use Django REST Framework effectively.
+
+- Your database models and the structure of views and URLs are well executed.
+
+- For error handling and validation, more work is needed. It's important to consider edge cases and use validation and exception handling mechanisms in models, serializers, and views.
+
+- Finally, regarding documentation, it's noticeable that it's missing for functions and classes. Documentation is not just a nice-to-have, but a crucial aspect of any project as it aids other developers in understanding and maintaining your code. Aim to include it in your next projects.
+
+In summary, you've got a good grasp of Django. Keep practicing and improving, especially focusing on better file organization, error handling, and comprehensive documentation.
+
+Best,
+Yossi
